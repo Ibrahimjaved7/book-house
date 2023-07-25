@@ -1,0 +1,9 @@
+h1 = @category.name
+
+ul
+  - @category.books.each do |book|
+    li
+      h2 = book.name
+      p = book.description
+      p strong = "Price: $#{book.price}"
+      = link_to "View Details", book_path(book)
